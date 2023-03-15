@@ -1,0 +1,116 @@
+/* * {
+  border: 1px solid red;
+  padding: 5px;
+} */
+
+:Root {
+    --color: rgba(173, 255, 47);
+    --transparentcolor: rgba(173, 255, 47, .5); 
+    --font: Monserrat;
+    --size: 20px;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  
+  body {
+    font-family: var(--font), sans-serif;
+  }
+  
+  
+  
+  /* menú en desktop */
+  header {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://images.unsplash.com/photo-1676412952811-64e55af5ba3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzczOTgzNDI&ixlib=rb-4.0.3&q=80&w=400) center center no-repeat;
+    background-size: cover;
+    
+  }
+  
+   ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    }
+  
+  
+  /* #menu, #menu-check {
+    display: none;
+  } */
+  
+  /* header img {
+    filter: brightness(.6);
+     aspect-ratio: 16/9;
+  } */
+  
+  header h1 {
+      text-shadow: 5px 5px 5px black;
+      color: var(--color);
+   }
+  
+  li {
+    text-align: center;
+    
+  }
+  
+  li p, li i {
+    font-size: calc((var(--size)*.8));
+    color: black;
+    text-decoration: none;
+    
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  nav {
+    background: var(--transparentcolor);
+    position: sticky;
+    top: 0;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+  
+  
+  li:hover {
+    background: var(--color);
+    font-weight: bold;
+    scale: 1.1;
+    box-shadow: 5px 5px 5px black;
+  }
+  
+  main div {
+    padding-top: 100px;
+  }
+  
+  
+  /* menú en dispositivo móvil */
+  @media (max-width: 470px) {
+    ul {
+      display:block; 
+    }
+    li {
+      text-align: left;
+    }
+  }
+  
+  button {
+    width: 50px;
+  }
+  
+  .dia {
+    border-radius: 10px 0 0 10px;
+    margin: 5px 0 0 5px;
+  }
+  
+  .noche {
+    border-radius: 0 10px 10px 0;
+    margin: 5px 0 0 0;
+  }
+  
+  .dia:hover, .noche:hover {
+    background: var(--color);
+  }
